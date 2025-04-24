@@ -6,11 +6,6 @@ export default function UserCard({ voter}) {
     return (
         <div>
             <div className='User-Card'>
-                <div className='userImage'>
-                    {
-                        voter.image ? (<img src={voter.image} alt='voter-image-no' />) : (<p>No image</p>)
-                    }
-                </div><br />
                 <div className='userDetails1'>
                     <p><h6>Name: &nbsp; {voter.firstName}&nbsp;{voter.lastName}</h6> </p>
                     <p><h6>Age: &nbsp;{voter.age}</h6></p>

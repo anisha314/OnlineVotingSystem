@@ -1,6 +1,6 @@
 
 .Vote-Page{
-    background-color: black;
+    background-color:  rgb(55, 0, 97);
     background-repeat: no-repeat;
     background-size: cover;
     /* height: 100%; */
@@ -20,7 +20,7 @@
 }
 
 .TableRow{
-    background-color:#89c4ee;
+    background-color:#697279;
 
 }
 .TableRow .table_row_heading{
@@ -42,7 +42,7 @@
 }
 .Heading1 p span{
     font-weight: bold;
-    color: #89c4ee;
+    color: #0099ffb7;
 }
 .Name-Row{
     /* border: 1px solid green; */

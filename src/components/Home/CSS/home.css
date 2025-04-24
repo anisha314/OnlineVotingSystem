@@ -2,7 +2,7 @@
 .Home{
     padding: 0rem;
     /* background-color: rgba(223, 223, 226, 0.529); */
-    background-color: black;
+    background-color: rgb(55, 0, 97);
     align-items: center;
     justify-content: center;
     overflow: hidden;
@@ -13,7 +13,7 @@
     border-radius: 0.1rem;
     margin: 0rem auto;
     padding: 0rem;
-    background-color: black;
+    background-color: rgb(55, 0, 97);
     width: 100%;
     
 }

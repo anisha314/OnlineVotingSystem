@@ -1,18 +1,8 @@
 import { useEffect, React, useRef} from 'react';
 import ScrollReveal from "scrollreveal";
-import { useNavigate } from 'react-router-dom';
-
 import "../CSS/upcomingElections.css"
+
 const UpcomingElections = ({voteStatus})=>{
-    const navigate = useNavigate();
-   
-    // const handleButtonClick = () => {
-    //     if (voteStatus) {
-    //         alert("You Have Already Voted");
-    //     } else {
-    //         navigate('/Vote')
-    //     }
-    //   };
     
     const revealRefBottom = useRef(null);
     const revealRefLeft = useRef(null);  
@@ -71,25 +61,14 @@ const UpcomingElections = ({voteStatus})=>{
     }, []); 
     return(
         <div className="upcomingElections">
-            <h2 ref={revealRefTop}>Upcoming Elections</h2>
+            <h2 ref={revealRefTop}>Elections</h2>
  
             <div className="upcomingElectionsCardContainer">
                 <div className="upcomingElectionCard" ref={revealRefLeft}>
-                    <h3>2024 India General Election</h3><br/>
-                    <p>General elections will be held in India from 19 April 2024 to 1 June 2024 to elect the 543 members of the 18th Lok Sabha. The elections will be held in seven phases and the results will be announced on 4 June 2024.</p><br/>
-                    <button><a href='/Vote'>Participate/Vote</a></button>
+                    <h3>2025 India General Election</h3><br/>
+                    <p>General elections will be held in India to elect the 543 members of the 18th Lok Sabha. The elections will be held in seven phases and the results will be announced.</p><br/>
+                    <button><a href='/Vote'>Vote now</a></button>
                 </div>
-                <div className="upcomingElectionCard" ref={revealRefBottom}>
-                    <h3>2024 India General Election</h3><br/>
-                    <p>General elections will be held in India from 19 April 2024 to 1 June 2024 to elect the 543 members of the 18th Lok Sabha. The elections will be held in seven phases and the results will be announced on 4 June 2024.</p><br/>
-                    <button><a href='/Vote'>Participate/Vote</a></button>
-                </div>
-                <div className="upcomingElectionCard" ref={revealRefRight}>
-                    <h3>2024 India General Election</h3><br/>
-                    <p>General elections will be held in India from 19 April 2024 to 1 June 2024 to elect the 543 members of the 18th Lok Sabha. The elections will be held in seven phases and the results will be announced on 4 June 2024.</p><br/>
-                    <button><a href='/Vote'>Participate/Vote</a></button>
-                </div>
-
             </div>
         </div>
     )

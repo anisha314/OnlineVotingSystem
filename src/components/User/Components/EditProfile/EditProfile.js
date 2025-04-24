@@ -2,7 +2,7 @@ import "../../../Sign/SignUtils/CSS/Sign.css";
 import "../../../Sign/SignUtils/CSS/style.css.map";
 import UserNavbar from "../../../Navbar/UserNavbar";
 import { useEffect, useState } from "react";
-import { getDatabase, ref, get } from "firebase/database";
+import { getDatabase, ref, get, update } from "firebase/database";
 import { app } from "../../../../firebase";
 import Cookies from "js-cookie";
 
@@ -18,13 +18,11 @@ const EditProfile = () => {
   });
 
   const db = getDatabase(app);
-  const voterKey = Cookies.get("myCookie"); // Assuming it's already set during login/signup
+  const voterKey = Cookies.get("myCookie");
 
-  // Fetch existing data from Firebase
   useEffect(() => {
     const fetchVoterData = async () => {
       if (!voterKey) return;
-
       try {
         const snapshot = await get(ref(db, `voters/${voterKey}`));
         if (snapshot.exists()) {
@@ -36,7 +34,7 @@ const EditProfile = () => {
             phone: data.phone || "",
             email: data.email || "",
             pass: data.pass || "",
-            re_pass: data.re_pass || "", // optional
+            re_pass: data.re_pass || "",
           });
         } else {
           console.log("No data found for voter.");
@@ -49,9 +47,30 @@ const EditProfile = () => {
     fetchVoterData();
   }, [voterKey]);
 
-  // Handle input change
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  // 🔄 Update Firebase on form submission
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (!voterKey) return;
+
+    try {
+      await update(ref(db, `voters/${voterKey}`), {
+        firstName: formData.name,
+        dob: formData.dob,
+        voterid: formData.voterid,
+        phone: formData.phone,
+        email: formData.email,
+        pass: formData.pass,
+        re_pass: formData.re_pass,
+      });
+      alert("Profile updated successfully!");
+    } catch (error) {
+      console.error("Error updating data:", error);
+      alert("Failed to update profile.");
+    }
   };
 
   return (
@@ -62,7 +81,7 @@ const EditProfile = () => {
           <div className="signup-content">
             <div className="signup-form">
               <h2 className="form-title">Edit Your Details</h2>
-              <form method="POST" className="register-form" id="register-form">
+              <form method="POST" className="register-form" id="register-form" onSubmit={handleSubmit}>
                 <div className="form-group">
                   <label htmlFor="name"><i className="zmdi zmdi-account material-icons-name"></i></label>
                   <input type="text" name="name" value={formData.name} onChange={handleChange} placeholder="Your Name" />

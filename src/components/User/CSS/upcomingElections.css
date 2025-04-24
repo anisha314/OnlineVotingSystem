@@ -34,12 +34,16 @@
     cursor: pointer;
 }
 
-.upcomingElections .upcomingElectionsCardContainer .upcomingElectionCard h3 {}
+.upcomingElections .upcomingElectionsCardContainer .upcomingElectionCard h3 {
+    color: black;
+}
 
-.upcomingElections .upcomingElectionsCardContainer .upcomingElectionCard p {}
+.upcomingElections .upcomingElectionsCardContainer .upcomingElectionCard p {
+    color: black;
+}
 
 .upcomingElections .upcomingElectionsCardContainer .upcomingElectionCard button {
-    background-color: black;
+    background-color: rgb(10, 21, 34);
     color: #89c4ee;
     padding: 0.5rem;
     border-radius: 6%;

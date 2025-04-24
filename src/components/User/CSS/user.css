@@ -1,5 +1,5 @@
 .User{
-    background-color: black;
+    background-color:  rgb(55, 0, 97);
     overflow-x: hidden;
 }
 .User .Heading2{
@@ -28,10 +28,6 @@
     margin: 1rem;
     /* background-color: whitesmoke; */
 }
-h3{
-
-}
-
 .details{
     /* border: 1px solid red; */
     margin: 1rem;
@@ -43,6 +39,7 @@ h3{
 }
 .details p{
     text-align: justify;
+    color: rgb(90, 88, 88);
 }
 
 @media (max-width: 1024px) {

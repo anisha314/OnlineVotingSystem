@@ -144,7 +144,7 @@ export default function CustomizedTables() {
     <div className="Vote-Page">
       <UserNavbar />
       <div className="candidate">
-        <h2 ref={revealRefLeft}>2024 India General Election</h2>
+        <h2 ref={revealRefLeft}>2025 India General Election</h2>
         <div className="Heading1" ref={revealRefRight}>
           <p><span>GIVE</span> Your Vote</p>
         </div>
@@ -184,9 +184,6 @@ export default function CustomizedTables() {
               {candidate.map((row) => (
                 <StyledTableRow key={row._id}>
                   <StyledTableCell>
-                    <span className="Name-Row image">
-                      <img src={row.img || ''} alt="candidate" />
-                    </span>
                     <span className="Name-Row text">{row.fullName}</span>
                   </StyledTableCell>
                   <StyledTableCell align="left">{row.party}</StyledTableCell>

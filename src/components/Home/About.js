@@ -1,5 +1,5 @@
 import './CSS/about.css'
-import AboutImage from './Images/voting7.jpg'
+import AboutImage from './Images/img4.jpg'
 import {useEffect, React, useRef } from 'react';
 import ScrollReveal from "scrollreveal";
 
