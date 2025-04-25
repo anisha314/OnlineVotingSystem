@@ -1,0 +1,12 @@
+[build]
+  command = "npm install --legacy-peer-deps && npm run build"
+  publish = "build"
+  environment = { 
+    NODE_ENV = "production"
+  }
+
+[context.production.environment]
+  NODE_ENV = "production"
+
+[build.environment]
+  NODE_VERSION = "14"  
