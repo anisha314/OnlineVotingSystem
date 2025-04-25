@@ -9,4 +9,4 @@
   NODE_ENV = "production"
 
 [build.environment]
-  NODE_VERSION = "14"  
+  NODE_VERSION = "14"
