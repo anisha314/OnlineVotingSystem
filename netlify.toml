@@ -1,3 +1,5 @@
 [build.environment]
 NODE_VERSION = "14"
 NPM_VERSION = "6"
+[build]
+cache = false
