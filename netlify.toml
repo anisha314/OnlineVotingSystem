@@ -1,11 +1,13 @@
 [build]
+  # Use legacy-peer-deps to avoid peer dependency issues
   command = "npm install --legacy-peer-deps && npm run build"
   publish = "build"
 
-  # Combine all environment variables under the same [build.environment] section
+  # Environment variables for the build environment
   [build.environment]
     NODE_ENV = "production"
-    NODE_VERSION = "14"
+    NODE_VERSION = "16"
 
+# Optional: Set environment variables for production deploy context
 [context.production.environment]
   NODE_ENV = "production"
