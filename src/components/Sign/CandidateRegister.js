@@ -8,7 +8,6 @@ import axios from "axios"
 import { BASE_URL } from "../../helper";
 import { useNavigate } from 'react-router-dom';
 
-
 const CandidateRegister = () => {
     const [loading, setLoading] = useState(false);
 
