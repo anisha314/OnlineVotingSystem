@@ -66,6 +66,14 @@ This Online Voting System allows voters to participate in elections remotely, en
 
 Follow the steps below to get this project up and running locally.
 
+## Live Demo
+
+-  [View Online Voting System](https://onlinevotingsys.netlify.app/)
+
+## GitHub Repository
+
+-  [View Source Code](https://github.com/anisha314/OnlineVotingSystem)
+
 ### Prerequisites
 
 - **npm** installed.
