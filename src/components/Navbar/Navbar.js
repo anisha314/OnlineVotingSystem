@@ -2,12 +2,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import './CSS/Nav.css'
+import Logo from './VotingLogo.png';
 
 function Nav_bar() {
   return (
     <Navbar expand="lg" className="Nav">
       {/* <Container className='Nav'>*/}
-        <Navbar.Brand className ="Heading" href="/">Online Voting System</Navbar.Brand>
+        <Navbar.Brand className ="Heading" href="/"><img src={Logo} alt= 'Logo' style={{width: "130px"}}></img></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" className='Toggle'/> 
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto Nav">

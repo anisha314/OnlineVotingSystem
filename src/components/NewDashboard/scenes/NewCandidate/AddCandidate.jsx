@@ -32,8 +32,6 @@ const AddCandidate = () => {
         age: values.age,
         party: values.party,
         bio: values.bio,
-        image: "", // Placeholder, or convert/upload separately
-        symbol: "", // Placeholder, or convert/upload separately
       });
 
       showSuccess();

@@ -46,15 +46,6 @@ const NewCandidates = () => {
 
   const columns = [
     {
-      field: "img",
-      headerName: "PHOTO",
-      renderCell: ({ row: { image } }) => (
-        <Box width="60%" m="0 auto" p="5px" display="flex" justifyContent="center">
-          {image ? <img src={image} alt="Candidate" height={50} /> : "No Image"}
-        </Box>
-      )
-    },
-    {
       field: "fullName",
       headerName: "CANDIDATE NAME",
       flex: 1,

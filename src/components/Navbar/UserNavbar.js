@@ -6,6 +6,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import './CSS/Nav.css'
 import axios from 'axios';
 import Cookies from 'js-cookie';
+import Logo from './VotingLogo.png';
 
 
 function UserNavbar() {
@@ -18,7 +19,7 @@ function UserNavbar() {
   return (
     <Navbar expand="lg" className="Nav">
       <Container fluid>
-        <Navbar.Brand href="#" className='Heading'>Online Voting System</Navbar.Brand>
+        <Navbar.Brand href="#" className='Heading'> <img src={Logo} alt= 'Logo' style={{width: "130px"}}></img></Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav

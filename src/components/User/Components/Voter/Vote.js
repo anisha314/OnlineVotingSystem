@@ -54,7 +54,7 @@ const columns = [
   { id: 'fullname', label: 'Candidate Name', minWidth: 250, align: 'left' },
   { id: 'party', label: 'Party', minWidth: 120 },
   { id: 'age', label: 'Age', minWidth: 180, align: 'center' },
-  { id: 'photo', label: 'Symbol', minWidth: 100, align: 'right' },
+  { id: 'photo', label: '', minWidth: 100, align: 'right' },
   { id: 'action', label: '', minWidth: 200 },
 ];
 
@@ -192,7 +192,7 @@ export default function CustomizedTables() {
                     {row.symbol ? (
                       <img src={row.symbol} alt="symbol" />
                     ) : (
-                      <p>No image</p>
+                      <p></p>
                     )}
                   </StyledTableCell>
                   <StyledTableCell align="right" className="voteButton">
