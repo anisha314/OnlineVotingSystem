@@ -9,7 +9,7 @@ import { ref, set } from "firebase/database";
 import { db } from "../../firebase";
 
 const stateCityMapping = {
-    "Andhra Pradesh": ["Visakhapatnam", "Vijayawada", "Guntur"],
+    "Andhra Pradesh": ["Visakhapatnam", "Vijayawada", "Guntur", "Kadapa"],
     "Arunachal Pradesh": ["Itanagar", "Tawang"],
     "Assam": ["Guwahati", "Dibrugarh"],
     "Bihar": ["Patna", "Gaya"],
