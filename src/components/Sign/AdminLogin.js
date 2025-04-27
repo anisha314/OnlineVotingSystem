@@ -18,19 +18,17 @@ const AdminLogin = () => {
     const [loading, setLoading] = useState(false);
 
     const loginSuccess = () => toast.success("Login Success",{
-        // position: toast.POSITION.TOP_CENTER,
+        
         className: "toast-message",
     });
     const loginFailed = () => toast.error("Invalid Details \n Please Try Again!",{
-        // position: toast.POSITION.TOP_CENTER,
+        
         className: "toast-message",
     });
 
     const handleLogin = async () => {
         setLoading(true);
         try {
-            //const response = await axios.post(`${BASE_URL}/adminlogin`, { username, password });
-            //console.log('testing ',response.data)
             if (username === "admin" && password === "admin@123"){
                 loginSuccess();
                 setTimeout(()=>{
@@ -64,7 +62,6 @@ const AdminLogin = () => {
 
                         <div className="signin-form">
                             <h2 className="form-title">Admin Login</h2>
-                            {/* <form method="" className="register-form" id="login-form"> */}
                             <ToastContainer />
                                 <div className="form-group">
                                     <label for="email"><i className="zmdi zmdi-account material-icons-name"></i></label>
@@ -75,12 +72,9 @@ const AdminLogin = () => {
                                     <input type="text" name="pass" id="pass" placeholder="Password" onChange={(e) => setPassword(e.target.value)} />
                                 </div>
                                 <div className="form-group form-button">
-                                    {/* <input type="submit" name="signin" id="signin" className="form-submit" value="Log in" onSubmit={handleLogin} /> */}
                                     <button onClick={handleLogin} disabled={loading}>{loading ? <div className="spinner"></div> : 'Login'}</button>
                                     
                                 </div>
-
-                            {/* </form> */}
                         </div>
                     </div>
 
