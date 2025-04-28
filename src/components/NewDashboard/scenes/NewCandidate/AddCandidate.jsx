@@ -26,7 +26,7 @@ const AddCandidate = () => {
   const handleFormSubmit = async (values, { resetForm }) => {
     setLoading(true);
     try {
-      const newCandidateRef = push(ref(db, "candidates")); // Auto-generate ID
+      const newCandidateRef = push(ref(db, "candidates"));
       await set(newCandidateRef, {
         fullName: values.fullName,
         age: values.age,

@@ -16,7 +16,7 @@ import {
   import StatBox from "../../newComponents/StatBox";
   import "../../New.css";
   import { ref, get, child } from "firebase/database";
-  import { db } from "../../../../firebase"; // Update path if needed
+  import { db } from "../../../../firebase"; 
   
   const NewDashboard = () => {
     const [candidates, setCandidates] = useState([]);
@@ -56,8 +56,6 @@ import {
             candidates: totalCandidates,
             voted: votersVoted,
           });
-  
-          // Convert candidates object to array for rendering
           const candidateArray = Object.values(candidatesData);
           setCandidates(candidateArray);
         } catch (error) {
@@ -75,14 +73,10 @@ import {
     return (
       <div className="mainBox">
         <Box m="20px" height="84vh">
-          {/* HEADER */}
           <Box display="flex" mb="10px" justifyContent="space-between" alignItems="center">
             <Header title="ADMIN DASHBOARD" subtitle="Welcome Administrator" />
           </Box>
-  
-          {/* GRID & CHARTS */}
           <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gridAutoRows="140px" gap="20px">
-            {/* ROW 1: Stat Boxes */}
             <Box gridColumn="span 3" backgroundColor={colors.primary[400]} display="flex" alignItems="center" justifyContent="center">
               <StatBox title={data.voters} subtitle="Total Voters" icon={<GroupIcon sx={{ color: colors.greenAccent[600], fontSize: "35px" }} />} />
             </Box>
@@ -91,9 +85,7 @@ import {
             </Box>
             <Box gridColumn="span 3" backgroundColor={colors.primary[400]} display="flex" alignItems="center" justifyContent="center">
               <StatBox title={data.voted} subtitle="Total Voters who have Voted" icon={<HowToVoteIcon sx={{ color: colors.greenAccent[600], fontSize: "35px" }} />} />
-            </Box>
-  
-            {/* ROW 2: Election Result + Candidate List */}
+            </Box>s
             <Box gridColumn="span 8" gridRow="span 2" backgroundColor={colors.primary[400]}>
               <Box mt="25px" p="0 30px" display="flex" justifyContent="space-between" alignItems="center">
                 <Typography variant="h4" fontWeight="600" color={colors.grey[100]}>

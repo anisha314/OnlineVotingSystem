@@ -1,5 +1,4 @@
 import { Box } from "@mui/material";
-// import { tokens } from "../../theme";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { ColorModeContext, useMode } from "../../theme";
 import BarChart from "../../newComponents/BarChart";

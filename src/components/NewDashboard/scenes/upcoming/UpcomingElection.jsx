@@ -16,7 +16,7 @@ const UpcomingElection = () => {
     const staticElections = [
         { id: '1', name: 'Presidential Election', date: '2024-11-05', status: 'upcoming' },
         { id: '2', name: 'Senate Election', date: '2024-11-05', status: 'upcoming' },
-        { id: '3', name: 'Governor Election', date: '2024-11-05', status: 'current' },
+        { id: '3', name: 'Governor Election', date: '2024-11-05', status: 'upcoming' },
         { id: '4', name: 'Local Council Election', date: '2024-11-05', status: 'current' },
     ];
 

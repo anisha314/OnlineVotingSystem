@@ -9,8 +9,7 @@ import Topbar from "../global/Topbar";
 import Sidebar from "../global/Sidebar";
 
 import { getDatabase, ref, onValue, remove } from "firebase/database";
-import { app } from "../../../../firebase"; // Make sure this is your Firebase config
-
+import { app } from "../../../../firebase"; 
 const Team = () => {
   const [theme, colorMode] = useMode();
   const [voters, setVoters] = useState([]);
